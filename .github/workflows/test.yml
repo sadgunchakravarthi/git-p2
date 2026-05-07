@@ -1,15 +1,20 @@
-name: sadgun-testing-workflow-hands-on
+name: test-workflow
 
-on:
-    workflow_dispatch
-#   push:
-#     branches:
-#       - main
+on: push
 
 jobs:
-  test1:
-    runs-on: ubuntu-latest
+    test:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        run: echo "Hello World"
+        steps:
+            - name: get code
+              uses: actions/checkout@v4
+
+            - name: install node js
+              uses: actions/setup-node@v6
+
+            - name: Install dependencies
+              run: npm ci
+            
+            - name: Run tests
+              run: npm test
