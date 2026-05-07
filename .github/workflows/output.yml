@@ -1,0 +1,22 @@
+name: Context Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Output repository
+        run: echo "${{ toJson(github.repository) }}"
+
+      - name: Output without to Jason
+        run: echo "${{ github.repository }}"
+
+      - name: Output actor
+        run: echo "${{ toJson(github.actor) }}"
+
+      - name: Output branch
+        run: echo "${{ toJson(github.ref) }}"
+
