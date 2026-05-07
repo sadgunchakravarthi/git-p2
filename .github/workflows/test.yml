@@ -3,18 +3,18 @@ name: test-workflow
 on: push
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: get code
-              uses: actions/checkout@v4
+    steps:
+      - name: get code
+        uses: actions/checkout@v4
 
-            - name: install node js
-              uses: actions/setup-node@v6
+      - name: install node js
+        uses: actions/setup-node@v4
 
-            - name: Install dependencies
-              run: npm ci
-            
-            - name: Run tests
-              run: npm test
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
