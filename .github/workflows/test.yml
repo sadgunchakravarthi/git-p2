@@ -1,0 +1,14 @@
+name: sadgun-testing-workflow-hands-on
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        run: echo "Hello World"
