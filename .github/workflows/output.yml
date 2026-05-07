@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Output repository
-        run: echo "${{ toJson(github.repository) }}"
+        run: echo "${{ toJson(github) }}"
 
       - name: Output without to Jason
-        run: echo "${{ github.repository }}"
+        run: echo "${{ github}}"
 
       - name: Output actor
         run: echo "${{ toJson(github.actor) }}"
