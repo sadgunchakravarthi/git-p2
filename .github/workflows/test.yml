@@ -1,9 +1,10 @@
 name: sadgun-testing-workflow-hands-on
 
 on:
-  push:
-    branches:
-      - main
+    workflow_dispatch
+#   push:
+#     branches:
+#       - main
 
 jobs:
   test1:
